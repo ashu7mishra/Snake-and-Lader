@@ -10,3 +10,9 @@ class Snake:
             pos = pos.split()
             self.snake_position.append([int(pos[0]), int(pos[1])])
         return self.snake_position
+    
+    def check_snake_position(self, position):
+        for pos in self.snake_position:
+            if pos[1] == position:
+                return pos[0]
+        return None

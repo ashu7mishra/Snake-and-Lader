@@ -10,3 +10,9 @@ class Ladder:
             pos = pos.split()
             self.ladder_position.append([int(pos[0]), int(pos[1])])
         return self.ladder_position
+    
+    def check_ladder_position(self, position):
+        for pos in self.ladder_position:
+            if pos[0] == position:
+                return pos[1]
+        return None
